@@ -9,4 +9,4 @@ You can use arguements one and two seperate or together.Arguement three must be 
 
 1. Supplying '--nowplaying' returns movies that are currently playing.
 
-**Supplying '--overview' alongside '--genre' or 'year' or both 'genre' 'year' returns and overview of what the movies are about**
+**Supplying '--overview' alongside '--genre' or 'year' or both 'genre' and 'year' returns and overview of what the movies are about**
