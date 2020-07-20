@@ -3,7 +3,9 @@ from genres import movie_genres
 import sys
 import argparse
 
+
 def get_movies(url):
+    """Function to get a a list of movies"""
     response = requests.get(url)
     json_response = response.json()
     for count, value in enumerate(json_response.get('results'), start=1):
@@ -11,6 +13,7 @@ def get_movies(url):
 
 
 def get_overview(url):
+    """Function to get the overview of each movie"""
     response = requests.get(url)
     json_response = response.json()
     for count, value in enumerate(json_response.get('results'), start=1):
@@ -20,6 +23,7 @@ def get_overview(url):
         print('\n')
 
 def get_nowplaying():
+    """Function to get a list movies currently playing"""
     np_url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=54bb31247dabf5791bce265c2fa2cd4f&language=en-US&page=1'
     response = requests.get(np_url)
     json_rsponse = response.json()
@@ -73,7 +77,7 @@ def main(args):
         year_strip = f'&primary_release_year={year}'
         url += year_strip
 
-    if ns.genre or ns.year:
+    if ns.genre and not ns.overview or ns.year and not ns.overview:
         get_movies(url)
     if ns.genre and ns.overview or ns.year and ns.overview or ns.year and ns.overview and ns.genre:
         get_overview(url)
