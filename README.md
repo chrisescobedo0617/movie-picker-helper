@@ -1,6 +1,8 @@
 # movie-picker-helper
 A simple program to help pick what movies to watch.
 ## Usage
+### After cloning
+After you clone the repo you need to navigate to [The Movie DB website](https://www.themoviedb.org/login) and create an account and also sign up to access their api.
 * The user uses the command line to possibly pass in things they want in the movies returned.
 ### Command line arguments
 You can use arguements one, two, and three seperate or together. Arguement four must be alone.
