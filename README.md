@@ -1,7 +1,9 @@
 # movie-picker-helper
 A simple program to help pick what movies to watch.
 ## After cloning
-After you clone the repo you need to navigate to [The Movie DB website](https://www.themoviedb.org/login) and create an account and also sign up to access their api.
+* After you clone the repo you need to navigate to [The Movie DB website](https://www.themoviedb.org/login) and create an account and also sign up to access their api.
+* Use the requirements.txt file to download the dependencies I used
+* Insert your API token everywhere I used mine ({os.environ["API_KEY"]})
 ### Usage
 * The user uses the command line to possibly pass in things they want in the movies returned.
 ### Command line arguments
