@@ -36,6 +36,7 @@ def get_nowplaying():
 
 
 def get_genre_int(user_genre):
+    """Function to take the genre the user passes in and return the corresponding int that matches it"""
     genres_url = f'https://api.themoviedb.org/3/genre/movie/list?api_key={os.environ["API_KEY"]}&language=en-US'
     response = requests.get(genres_url)
     genres = response.json().get('genres')
@@ -46,6 +47,7 @@ def get_genre_int(user_genre):
 
 
 def get_actor_int(user_actor):
+    """Function to take the actor the user passes in and return the corresponding int that matches them"""
     actor_url = f'https://api.themoviedb.org/3/search/person?api_key={os.environ["API_KEY"]}&language=en-US&query={user_actor}&page=1&include_adult=false'
     response = requests.get(actor_url)
     actors = response.json().get('results')
